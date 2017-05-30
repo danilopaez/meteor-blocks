@@ -49,7 +49,7 @@ Meteor.methods({
     if (scene.frozen) {
       throw new Meteor.Error(403, "Can't add blocks to frozen scene.");
     }
- 
+
     box.sceneId = sceneId;
     Boxes.insert(box);
   },
@@ -86,6 +86,12 @@ Meteor.methods({
     }
 
     Boxes.remove({sceneId: sceneId});
+  },
+  resetear: function(){
+    const scene = Scenes.findOne();
+
+    Boxes.remove({sceneId: scene._id});
+
   },
   newScene: function () {
     var id = Scenes.insert({
@@ -196,6 +202,12 @@ Meteor.publish("scenes", function (sceneId) {
   check(sceneId, String);
 
   return Scenes.find({_id: sceneId});
+});
+
+Meteor.publish("escenas", function () {
+
+
+  return Scenes.find({});
 });
 
 Meteor.publish("frozenScenes", function () {

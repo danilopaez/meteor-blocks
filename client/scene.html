@@ -7,14 +7,14 @@
 	<!-- turn navigation on and off reactively -->
   <navigationinfo type="turntable"
   headlight="false"></navigationinfo>
-	
+
 	<!-- lights -->
 	<pointLight location="0 40 0" intensity="0.3"></pointLight>
 	<pointLight location="-30 10 -20" intensity="0.7"></pointLight>
 	<directionalLight direction="-1 -1 -0.7" color="#ffe"
 		intensity="0.8" shadowIntensity="0.3"
 		shadowFilterSize="5"></directionalLight>
-	
+
 	<!-- ground -->
 	<transform rotation="-1.5707963267948966 0 0 1.5707963267948966">
   	<shape>
@@ -47,21 +47,14 @@
 <template name="controls">
 	<div class="controls">
 		<h1>
-			<a href="#/">
+			<!-- <a href="#/">-->
 				<span class="glyphicon glyphicon-home"></span>
 				Meteor Blocks
-			</a>
+			<!--</a> -->
 		</h1>
 
-		<h2>Scene ID</h2>
-		<p><a href="{{sceneUrl}}">{{sceneId}}</a></p>
 
-		{{#if frozen}}
-			<h2>Make Your Own</h2>
-			<p>
-				<button class="clone btn btn-primary">Edit a Copy</button>
-			</p>
-		{{/if}}
+
 
 		<h2>Controls</h2>
 		<p>
@@ -74,8 +67,7 @@
 		</p>
 
 		{{#unless frozen}}
-		<button class="clear-boxes btn btn-sm btn-default">
-			Clear all blocks</button>
+
 
 		<div class="color-picker">
 			<h2>Color picker</h2>
@@ -97,24 +89,8 @@
 		</div>
 		{{/unless}}
 
-		{{#if frozen}}
-			<h2>Share</h2>
-			<p>
-				{{#if screenshot}}
-					<img src="{{screenshot}}" class="screenshot" />
-				{{/if}}
-			</p>
-			<button class='btn btn-primary btn-sm facebook'>Share on Facebook</button>
-		{{else}}
-			<h2>Collaborate</h2>
-			<p>Anyone can collaborate on this scene if they go to this page.</p>
-			<p>Click publish to save this version and publish it to the front page.</p>
-			<button class="freeze btn btn-sm btn-default">Publish</button>
-			<button class="clone btn btn-sm btn-default">Make a Copy</button>
-		{{/if}}
 
-		<div class="github-link">
-			<a href="http://git.io/meteor3d">See the code on GitHub</a>
-		</div>
+
+		
 	</div>
 </template>
