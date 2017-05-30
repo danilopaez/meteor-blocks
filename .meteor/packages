@@ -10,3 +10,5 @@ backbone
 http
 twbs:bootstrap
 
+standard-minifier-css
+standard-minifier-js
