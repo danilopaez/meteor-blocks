@@ -17,7 +17,7 @@ var RouterClass = Backbone.Router.extend({
     Session.set("showAll", false);
 
     Meteor.subscribe("frozenScenes");
-    Meteor.subscribe("escenas", null, () => {
+    Meteor.subscribe("escenas", null, function() {
       var nuevaScene = Scenes.findOne();
       Router.navigate("/scene/" + nuevaScene._id, { trigger: true });
     });
