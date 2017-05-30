@@ -88,7 +88,7 @@ Meteor.methods({
     Boxes.remove({sceneId: sceneId});
   },
   resetear: function(){
-    const scene = Scenes.findOne();
+    var scene = Scenes.findOne();
 
     Boxes.remove({sceneId: scene._id});
 
