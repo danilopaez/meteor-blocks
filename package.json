@@ -1,0 +1,20 @@
+{
+  "name": "meteor-blocks",
+  "version": "1.0.0",
+  "description": "Meteor Blocks Voxel Editor =================",
+  "main": "config-default.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stubailo/meteor-blocks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stubailo/meteor-blocks/issues"
+  },
+  "homepage": "https://github.com/stubailo/meteor-blocks#readme"
+}
